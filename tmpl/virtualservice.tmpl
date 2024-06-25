@@ -1,0 +1,8 @@
+          route_config:
+            name: s3-rgw
+            virtual_hosts:
+            - name: s3-rgw
+              domains:
+              - "${name}:443"
+              - "${name}"
+              routes:

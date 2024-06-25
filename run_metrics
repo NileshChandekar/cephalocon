@@ -1,0 +1,11 @@
+#!/bin/bash
+
+podman rm -f metrics
+podman run -d --rm \
+    --name "metrics" \
+    -v $(pwd)/rates.py:/opt/app-root/src/rates.py \
+    -v $(pwd)/payment.py:/opt/app-root/src/payment.py \
+    -e "WEB_CONCURRENCY=5" \
+    -e "REDIS=wkst.example.com" \
+    -p 8080:8080 \
+    quay.io/rhn_support_milang/ceph_metrics:opa

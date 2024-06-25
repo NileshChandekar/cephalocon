@@ -1,0 +1,8 @@
+#!/bin/bash
+
+podman run --rm -d --name prometheus -p 9090:9090 \
+   --add-host ceph1.example.com:192.168.192.155 \
+   --add-host ceph2.example.com:192.168.192.129 \
+   -v $(pwd)/prometheus.yml:/etc/prometheus/prometheus.yml \
+   -v prometheus:/prometheus \
+   docker.io/prom/prometheus 

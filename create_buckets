@@ -1,0 +1,24 @@
+#!/bin/bash -x 
+
+export AWS_EC2_METADATA_DISABLED=true
+export AWS_CA_BUNDLE=ca.crt
+export AWS_ENDPOINT_URL=https://s3.example.com
+for region in us-east-1 us-west-1 ; do
+    for u in $(seq 1 50) ; do 
+        AWS_ACCESS_KEY_ID=user${u} \
+        AWS_SECRET_ACCESS_KEY=user${u} \
+        AWS_REGION=${region} \
+        /usr/local/bin/aws s3api create-bucket --bucket=user${u}
+    done
+done
+u='-east'
+AWS_ACCESS_KEY_ID=user${u} \
+        AWS_SECRET_ACCESS_KEY=user${u} \
+        AWS_REGION=us-east-1 \
+        /usr/local/bin/aws s3api create-bucket --bucket=user${u}
+
+u='-west'
+AWS_ACCESS_KEY_ID=user${u} \
+        AWS_SECRET_ACCESS_KEY=user${u} \
+        AWS_REGION=us-west-1 \
+        /usr/local/bin/aws s3api create-bucket --bucket=user${u}

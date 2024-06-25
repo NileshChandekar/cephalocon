@@ -1,0 +1,5 @@
+#!/bin/bash
+
+podman rm -f redis
+podman run --name "redis" -d --rm -p 6379:6379 docker.io/library/redis
+
