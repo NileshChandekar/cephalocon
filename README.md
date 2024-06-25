@@ -286,9 +286,6 @@ The following query uses `jq` to:
 
 * Select only the metrics with a region of `us-east-1`
 * Extract the `request_duration_seconds` values
-* Calculate the average (mean) value using the `mean` function
-
-The output would be the average request duration for all buckets in the `us-east-1` region.
 
 ```
 curl -ksg 'http://wkst.example.com:9090/api/v1/query?query=s3_request_total{}' | \
