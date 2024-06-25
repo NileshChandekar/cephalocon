@@ -396,6 +396,7 @@ I'm also excited about some of the additional features we could implement, such 
 
 These are just a few ideas, but I believe there are many more opportunities to enhance RGW and provide even more value to users.
 
+Take a look at some [screenshots](Dashboards-Routing.md) showcasing various use cases for visualizing and routing traffic within the lab.
 
 #####  Lab setup guide
 
