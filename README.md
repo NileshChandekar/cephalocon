@@ -323,9 +323,6 @@ rate limiting capabilities, we can create custom pricing plans for our customers
 For example, we could set a daily limit on the number of requests or data transferred, thereby controlling costs and preventing unexpected overages. 
 This would be particularly useful for businesses that require predictable expenses and budgeting.
 
-By integrating financial operations and payment limitations into our Lab setup, we can provide a more comprehensive and customer-centric solution, 
-helping to drive revenue and growth for our business.
-
 To test the payment limitations, let's update the `payment.py` file by changing the `limit` value to 0.0001. This will simulate a payment limit that can 
 be reached relatively quickly.
 
