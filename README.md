@@ -7,7 +7,7 @@ The use cases that have been accessed are:
 * Global access to RGW, independent of zones or regions.
 * Rate limiting applied globally, encompassing all included zones, regions, and authorities.
 * S3 metrics embedded within the request (no log parsing) across zones, regions, and authorities.
-* Possible additional features to be utilized include:
+* Possible additional features to be utilized
 
 # Requirements
 
