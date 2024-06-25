@@ -281,7 +281,7 @@ s3_rate_limited_total{authority="s3.example.com",bucket="*",method="GET",region=
 
 
 To further analyze the scraped metrics, you can execute a query using `jq`, a lightweight and flexible command-line JSON processor. For example, to 
-extract the average request duration for all buckets in the `us-east-1` region.
+extract the total request for user17 in the `all` region.
 The following query uses `jq` to:
 
 * Select only the metrics with a region of `us-east-1`
